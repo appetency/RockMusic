@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.example.administrator.rockmusic.CircleImage.CircleImageView
+            android:id="@+id/main_circleimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rabbit_red"
+            app:BorderColor="@color/colorPrimary"
+            app:BorderWidth="2dp"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight,NestedWeights" />
+
+        <TextView
+            android:id="@+id/tv_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/blueandwhite"
+            android:textColor="#fff"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_main_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_main_title"
+            android:gravity="center"
+            android:text="@string/JayChou"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            tools:ignore="ObsoleteLayoutParam" />
+    </LinearLayout>
+
+    <include layout="@layout/player_item"
+       />
+</LinearLayout>
